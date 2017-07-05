@@ -5,7 +5,6 @@
 <!--* Time: 下午1:15-->
 <!--*/-->
 <?php
-// define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $telErr = "";
 $name = $email = $gender = $tel = "";
 
@@ -14,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
         $nameErr = "姓名是必填的";
     } elseif (!preg_match("~[\x{4e00}-\x{9fa5}]+~u",$_POST["name"])) {
+        // 检查中文名是否符合规范
         $nameErr = "请输入真实姓名";
     } elseif (empty($_POST["email"])) {
         $emailErr = "电邮是必填的";
