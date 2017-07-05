@@ -1,0 +1,6 @@
+`id` INT NOT NULL AUTO_INCREMENT ,
+`name` VARCHAR(15) NOT NULL ,
+`email` VARCHAR(30) NOT NULL ,
+`mobile` VARCHAR(15) NOT NULL ,
+`birthday` DATE NOT NULL ,
+PRIMARY KEY (`ID`)

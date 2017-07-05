@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul {
+    width: 280px;
+    margin: auto;
+}
+
+li {
+    padding: 5px 0;
+}
+
+#submitDiv {
+    text-align: center;
+    margin: 20px 0;
+}
