@@ -9,6 +9,7 @@ A simple contact book mainly write by php.
 - contacts list
 - add
 - delete
+- imperfect modify ?
 - form validator
     - email 
     - chinese name
@@ -18,3 +19,7 @@ A simple contact book mainly write by php.
 ##In progress
 - modify
 
+
+##Records
+- try to move 【add】 and 【delete】 function out of index.php
+- try to get params from $_GET['id'] and render html page failed but echo works..

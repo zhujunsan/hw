@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $isValid = true;
     }
 
-//
 //    if (!file_exists("contactsBook.json")) {
 //        file_put_contents("contactsBook.json", '');
 //    }
@@ -61,6 +60,7 @@ function test_input($data) {
     return $data;
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
