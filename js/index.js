@@ -109,10 +109,10 @@ function showResult(data){
 		data.forEach(function(message, index) {
 			res = res + '<tr>';
 			res = res + '<td>' + message['id'] + '</td>';
-			res = res + '<td class="tdName" id="tdName"' + message['id'] +'>' + message['name'] + '</td>';
-			res = res + '<td class="tdMail" id="tdMail"' + message['id'] +'>' + message['mail'] + '</td>';
-			res = res + '<td class="tdPhone" id="tdPhone"' + message['id'] +'>' + message['phone'] + '</td>';
-			res = res + '<td class="tdBirth" id="tdBirth"' + message['id'] +'>' + message['birth'] + '</td>';
+			res = res + '<td class="tdName" id="tdName' + message['id'] +'">' + message['name'] + '</td>';
+			res = res + '<td class="tdMail" id="tdMail' + message['id'] +'">' + message['mail'] + '</td>';
+			res = res + '<td class="tdPhone" id="tdPhone' + message['id'] +'">' + message['phone'] + '</td>';
+			res = res + '<td class="tdBirth" id="tdBirth' + message['id'] +'">' + message['birth'] + '</td>';
 			res = res + '<td>' + '<button id="btnUpdate'+ message['id'] + '" class="btnUpdate">修改</button>' + '</td>';
 			res = res + '<td>' + '<button id="btnDelete'+ message['id'] + '" class="btnDelete">删除</button>' + '</td>';
 			res = res + '</tr>';
@@ -138,6 +138,32 @@ $(document).on('dblclick', 'td', function(e){
 			$content.parent().html(content);
 		});	
 	}
+})
 
-
+$(document).on('click', '.btnUpdate', function(e){
+	var thisID = $(e.target).attr("id");
+	var numID = thisID.substr(thisID.length - 1, 1);
+	var url="php/proc.php";
+	url = url + "?operate=update";
+	url = url + "&name=" + $("#tdName" + numID).html();
+	url = url + "&mail=" + $("#tdMail" + numID).html();
+	url = url + "&phone=" + $("#tdPhone" + numID).html();
+	url = url + "&birth=" + $("#tdBirth" + numID).html();
+	url = url + "&id=" + numID;
+	$.ajax({
+		type: "GET",
+		url: url, 
+		cache: false,
+		dataType:'json',
+        success: function(data){  
+			var res = "似乎出了点问题";
+			if(data == 0){
+				res = "成功修改！";
+			}
+			$("#showResult").html(res);
+		},
+		error: function(xhr){
+			console.log("error!——————",xhr);
+		} 
+	 })
 })
