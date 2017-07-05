@@ -9,7 +9,10 @@ $mobile = $_POST['mobile'];
 $birthday = $_POST['birthday'];
 require('connectDatabase.php');
 
-if ($name === '' || $email === '' || $mobile === '' || $birthday === '') {
+$emailRule = '/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/';
+$birthdayRule = '/^((?:19|20)\d\d)-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/';
+
+if ($name === '' || !preg_match($emailRule,$email) || $mobile === '' || !preg_match($birthdayRule,$birthday)) {
     echo "<script>alert('填写内容错误');</script>";
 
     /*$post_data = array();
@@ -34,8 +37,8 @@ if ($name === '' || $email === '' || $mobile === '' || $birthday === '') {
     echo $html;*/
     echo "<script>window.location.href='add.php';</script>";
 } else {
-    $sql = "INSERT INTO `contacts` (`name`, `email`, `mobile`, `birthday`) VALUES ($name, $email, $mobile,'$birthday');";
+    $sql = "INSERT INTO `contacts` (`name`, `email`, `mobile`, `birthday`) VALUES ($name, '$email', $mobile,'$birthday');";
     $stmt = $db->query($sql);
-    echo "<script>alert('新增成功');</script>";
+    echo "<script>alert('$sql');</script>";
     echo "<script>window.location.href='index.php';</script>";
 }

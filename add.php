@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </li>
         <li>
             生日：
-            <input type="text" name="birthday" value="<?php echo $birthday; ?>" placeholder="格式为XXXX-YY-MM">
+            <input type="text" name="birthday" value="<?php echo $birthday; ?>" placeholder="格式为YYYY-MM-DD">
         </li>
     </ul>
     <div id="submitDiv">
