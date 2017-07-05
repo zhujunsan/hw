@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<?php
+include("./MysqlConnection.php");
+include("./User.php");
+include("./UserController.php");
+
+$controller = new UserController();
+
+if (isset($_SERVER['QUERY_STRING'])){
+	try{
+	$action = explode('=', $_SERVER['QUERY_STRING'])[1];
+	$controller->route($action, $_POST);
+	} catch (Exception $e) {
+	    echo($e->getTraceAsString());
+	}
+	unset($_SERVER['QUERY_STRING']);
+}
+?>
+
+<form action="index.php?action=newUser" method="post">
+<p>姓名:<input type="text" name="userName"/></p>
+<p>手机:<input type="text" name="phoneNumber"/></p>
+<p>邮箱:<input type="email" name="email"/></p>
+<p>生日:<input type="date" name="birthday"/></p>
+<input type="submit" value="提交"/>
+
+<div class="user-list">
+<?php
+
+$userList = $controller->getAllUser();
+foreach($userList as $user){
+?>
+<form class="user-item" method="post">
+<input type="hidden" name="id" value="<?php echo $user->id ?>"/>
+<p>
+姓名: <input type="text" value="<?php echo $user->name ?>" name="userName"/>
+手机: <input type="text" value="<?php echo $user->tel ?>" name="phoneNumber"/>
+邮箱: <input type="text" value="<?php echo $user->email ?>" name="email"/>
+生日: <input type="date" value="<?php echo $user->birthday ?>" name="birthday"/>
+
+<input type="submit" value="删除" formaction="index.php?action=deleteUser"/>
+<input type="submit" value="修改" formaction="index.php?action=updateUser"/>
+</p>
+</form>
+<?php
+}
+?>
+</div>
+
+</body>
+</html>
