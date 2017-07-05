@@ -16,10 +16,10 @@ A simple contact book mainly write by php.
     - phone number
     - empty form
 
-##In progress
+## In progress
 - modify
 
 
-##Records
+## Records
 - try to move 【add】 and 【delete】 function out of index.php
 - try to get params from $_GET['id'] and render html page failed but echo works..
