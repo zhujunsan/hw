@@ -1,0 +1,11 @@
+html{
+    background-color: gainsboro;
+}
+.contact{
+    background-color: khaki;
+    position:relative;
+    float: left;
+    width: 25%;
+    margin-left: 20px;
+
+}
