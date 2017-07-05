@@ -19,7 +19,7 @@ if ($handle) {
         $oldContact=explode("^",$buffer);
         //最后一行为空行
         if(count($oldContact)>1) {
-            echo "<div class='contact'><input type='text' class='name' value='". $oldContact[0] ."'/> <br/>
+            echo "<div class='contact' name='contact'><input type='text' class='name' value='". $oldContact[0] ."'/> <br/>
                邮件：<input type='text' class='email' value='". $oldContact[1] ."'/> <br/>
                电话：<input type='text' class='tel' value='". $oldContact[2] ."'/> <br/>
                生日：<input type='text' class='birthday' value='". $oldContact[3] ."'/><br/>
@@ -35,6 +35,27 @@ if ($handle) {
     $("#add").click(function() {
         window.location.href="add.php";
     });
+    //删除事件
+    $(document).on('click', '.trash', function(e){
+        if(confirm("确认删除？")) {
+            $(e.target).parent().remove();
+            //本来想尝试ajax来做，但是请求没有发成功
+            /*$.ajax({
+             cache: true,
+             type: "POST",
+             url: 'ashx/test.php',//提交的URL
+             data: $('#contact').serialize(), //序列化表单发送
+             async: false,
+             success: function (data) {
+             $(e.target).parent().remove();
+             },
+             error: function (request) {
+             alert("Connection error");
+             }
+             });*/
+        }
+    })
+
 
 </script>
 </body>
