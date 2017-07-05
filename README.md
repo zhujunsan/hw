@@ -1,2 +1,1 @@
-# hw
-2017 Summer Camp HW3 Backend
+#通讯录1、使用mysql进行数据存储建库语句```CREATE DATABASE db_addbook```建表语句```create table tbl_person(	id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,	name VARCHAR(10) NOT NULL,		phone VARCHAR(15) NOT NULL,		email VARCHAR(64) NOT NULL,		birth VARCHAR(10) NOT NULL);```建用户```create user 'test'@% identified by '123'grant all on db_addbook.tbl_person to 'test'@%```2、通讯录列表界面可以显示数据库中的信息，是不是没法测试0.0
