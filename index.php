@@ -66,6 +66,8 @@ function test_input($data) {
 <head>
     <title>我的php通讯录</title>
     <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <h1>通讯录</h1>
@@ -95,20 +97,19 @@ echo "<h2>通讯录：</h2>";
 echo "<hr>";
 $contacts = json_decode(file_get_contents('contactsBook.json'),true);
 foreach ($contacts as $name => $contact) {
-    echo "name:" . $name;
+    echo "name:     " . $name;
     echo "<br>";
-    echo "email:" . $contact['email'];
+    echo "email:        " . $contact['email'];
     echo "<br>";
-    echo "tel:" . $contact['tel'];
+    echo "tel:      " . $contact['tel'];
     echo "<br>";
-    echo "gender:" . $contact['gender'];
+    echo "gender:       " . $contact['gender'];
     echo "<br>";
-    echo "<button id='" . $name . "' onclick=\"delete_contact(this.id)\">删除</button>";
+    echo "<button value='" . $name . "' onclick=\"modify_contact(this.value)\">修改</button>";
+    echo "<button value='" . $name . "' onclick=\"delete_contact(this.value)\">删除</button>";
     echo "<hr>";
 }
 ?>
 
-<script src="main.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </body>
 </html>

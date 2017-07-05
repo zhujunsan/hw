@@ -3,13 +3,26 @@
  */
 
 function delete_contact(id) {
-    console.log(id);
     $.ajax({
-        url:"index.php",           //the page containing php script
-        type: "GET",               //request type
+        url:"index.php",
+        type: "GET",
         data:{ 'id' : id },
         success:function(result){
             alert('删除成功');
+            window.location.href = 'index.php';
+        }
+    });
+}
+
+function modify_contact(id) {
+    console.log('modify');
+    $.ajax({
+        url:"modify.php",
+        type: "GET",
+        data:{ 'id' : id },
+        success:function(result){
+            // alert('删除成功');
+            window.location.href = 'modify.php?id='+id;
         }
     });
 }
