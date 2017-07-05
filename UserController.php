@@ -14,7 +14,7 @@ class UserController{
 	}
 
 	public function newUser($request){
-		$user = $this->getUser($request);
+		$user = $this->getNewUser($request);
 		if ($this->isAvailableUser($user)) {
 			if (!MysqlConnection::isUserExist($user)){
 				MysqlConnection::insertUser($user);
@@ -51,10 +51,25 @@ class UserController{
 		return $user;
 	}
 
+	function getNewUser($request){
+		$user = new User();
+		$user->name = $request['newName'];
+		$user->tel = $request['newNumber'];
+		$user->email = $request['newEmail'];
+		$user->birthday = $request['newBirthday'];
+
+		return $user;
+	}
+
 	function isAvailableUser($user){
 		$avail = true;
 		$avail &= !empty($user->name);
 		$avail &= !empty($user->tel);
+
+		//手机号验证
+		//$matchCount = preg_match("1[3|4|5|8][0-9]{9}", $user->tel);
+		//$avail &= matchCount == 1;
+
 		$avail &= !empty($user->email);
 		$avail &= !empty($user->birthday);
 

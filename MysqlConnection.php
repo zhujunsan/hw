@@ -55,9 +55,9 @@ class MysqlConnection{
 		$querySql = "SELECT * FROM User WHERE tel = $user->tel OR email = $user->email";
 		$result = mysqli_query(MysqlConnection::$con, $querySql);
 		if ($result == false){
-			return true;
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	public static function insertUser($newUser){

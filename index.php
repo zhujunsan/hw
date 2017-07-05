@@ -25,11 +25,12 @@ if (isset($_SERVER['QUERY_STRING'])){
 ?>
 
 <form action="index.php?action=newUser" method="post">
-<p>姓名:<input type="text" name="userName"/></p>
-<p>手机:<input type="text" name="phoneNumber"/></p>
-<p>邮箱:<input type="email" name="email"/></p>
-<p>生日:<input type="date" name="birthday"/></p>
+<p>姓名:<input type="text" name="newName"/></p>
+<p>手机:<input type="text" name="newNumber"/></p>
+<p>邮箱:<input type="email" name="newEmail"/></p>
+<p>生日:<input type="date" name="newBirthday"/>
 <input type="submit" value="提交"/>
+</p>
 
 <div class="user-list">
 <?php
