@@ -51,7 +51,7 @@ class MysqlConnection{
 		return $userList;
 	}
 
-	public static function isUserExist($user){
+	public static function isUserExist($user) {
 		$querySql = "SELECT * FROM User WHERE tel = $user->tel OR email = $user->email";
 		$result = mysqli_query(MysqlConnection::$con, $querySql);
 		if ($result == false){
