@@ -20,7 +20,7 @@ if (isset($_SERVER['QUERY_STRING'])){
 	} catch (Exception $e) {
 	    echo($e->getTraceAsString());
 	}
-	unset($_SERVER['QUERY_STRING']);
+	$_POST = array(); 
 }
 ?>
 

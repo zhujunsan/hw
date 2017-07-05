@@ -15,8 +15,12 @@ class UserController{
 
 	public function newUser($request){
 		$user = $this->getUser($request);
-		if ($this->isAvailableUser($user)){
-			MysqlConnection::insertUser($user);
+		if ($this->isAvailableUser($user)) {
+			if (!MysqlConnection::isUserExist($user)){
+				MysqlConnection::insertUser($user);
+			} else {
+				print("Insert Fail, User Exist:\n".$user->introSelf());
+			}
 		}
 	}
 
@@ -27,7 +31,7 @@ class UserController{
 	public function updateUser($request){
 		$user = $this->getUser($request);
 		$user->id = $request['id'];
-		if ($this->isAvailableUser($user)){
+		if ($this->isAvailableUser($user)) {
 			MysqlConnection::updateUser($user);
 		}
 	}
@@ -53,6 +57,10 @@ class UserController{
 		$avail &= !empty($user->tel);
 		$avail &= !empty($user->email);
 		$avail &= !empty($user->birthday);
+
+		if (!$avail) {
+			print("Invalid User Info:\n".$user->introSelf());
+		}
 		return $avail;
 	}
 }

@@ -51,13 +51,21 @@ class MysqlConnection{
 		return $userList;
 	}
 
+	public static function isUserExist($user){
+		$querySql = "SELECT * FROM User WHERE tel = $user->tel OR email = $user->email";
+		$result = mysqli_query(MysqlConnection::$con, $querySql);
+		if ($result == false){
+			return true;
+		}
+		return false;
+	}
+
 	public static function insertUser($newUser){
 		$insertSql = "INSERT INTO User (name, tel, email, birthday) VALUES ('$newUser->name', '$newUser->tel', '$newUser->email', '$newUser->birthday')";
 		if (mysqli_query(MysqlConnection::$con, $insertSql)) {
 			print("Insert Success: id = ".mysqli_insert_id(MysqlConnection::$con)."\n");
 		} else {
-			print("Insert Fail: user = ");
-			$newUser->introSelf();
+			print("Insert Fail:\n".$newUser->introSelf());
 		}
 	}
 
