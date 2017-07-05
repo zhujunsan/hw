@@ -1,0 +1,81 @@
+<?php
+
+class UserController{
+	public function __construct(){
+		MysqlConnection::connect();
+	}
+
+	public function __destruct(){
+		MysqlConnection::close();
+	}
+
+	public function route($action, $request){
+		$this->$action($request);
+	}
+
+	public function newUser($request){
+		$user = $this->getNewUser($request);
+		if ($this->isAvailableUser($user)) {
+			if (!MysqlConnection::isUserExist($user)){
+				MysqlConnection::insertUser($user);
+			} else {
+				print("Insert Fail, User Exist:\n".$user->introSelf());
+			}
+		}
+	}
+
+	public function deleteUser($request){
+		MysqlConnection::deleteUser($request['id']);
+	}
+
+	public function updateUser($request){
+		$user = $this->getUser($request);
+		$user->id = $request['id'];
+		if ($this->isAvailableUser($user)) {
+			MysqlConnection::updateUser($user);
+		}
+	}
+
+	public function getAllUser(){
+		$userList = MysqlConnection::selectUsers();
+		return $userList; 
+	}
+
+	function getUser($request){
+		$user = new User();
+		$user->name = $request['userName'];
+		$user->tel = $request['phoneNumber'];
+		$user->email = $request['email'];
+		$user->birthday = $request['birthday'];
+
+		return $user;
+	}
+
+	function getNewUser($request){
+		$user = new User();
+		$user->name = $request['newName'];
+		$user->tel = $request['newNumber'];
+		$user->email = $request['newEmail'];
+		$user->birthday = $request['newBirthday'];
+
+		return $user;
+	}
+
+	function isAvailableUser($user){
+		$avail = true;
+		$avail &= !empty($user->name);
+		$avail &= !empty($user->tel);
+
+		//手机号验证
+		//$matchCount = preg_match("1[3|4|5|8][0-9]{9}", $user->tel);
+		//$avail &= matchCount == 1;
+
+		$avail &= !empty($user->email);
+		$avail &= !empty($user->birthday);
+
+		if (!$avail) {
+			print("Invalid User Info:\n".$user->introSelf());
+		}
+		return $avail;
+	}
+}
