@@ -39,9 +39,10 @@ $row = $stmt->fetch_row();
         <span><?php echo $row[4]; ?></span>
     </li>
 </ul>
-<div id="delete">
-    <form action="delete.php" method="post">
+<div id="deleteDiv">
+    <form action="deleteContacts.php" method="post">
         <input name="id" id="userId" value="<?php echo $id ?>" />
+        <input type="button" value="返回" onclick="window.location.href='index.php'" />
         <input type="submit" value="删除" />
     </form>
 </body>

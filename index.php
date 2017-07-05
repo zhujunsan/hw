@@ -15,7 +15,10 @@ require('./connectDatabase.php');
 </head>
 <body>
     <table width="100%">
-        <caption>通讯录</caption>
+        <caption>
+            通讯录
+            <span><button onclick="window.location.href='add.php'">新增</button></span>
+        </caption>
         <tbody>
             <?php
             $stmt = $db->query($sql);

@@ -12,11 +12,7 @@ li {
     padding: 5px 0;
 }
 
-#deleteDiv {
+#submitDiv {
     text-align: center;
     margin: 20px 0;
-}
-
-#userId {
-    display: none;
 }
