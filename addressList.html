@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人通讯录</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+<h1>个人通讯录</h1>
+<ul id="address-list">
+    <li class="list-item">
+        <div class="name">姓名</div>
+        <div class="phone">电话</div>
+        <div class="email">邮箱</div>
+        <div class="birth">生日</div>
+    </li>
+</ul>
+
+<script>
+    $(function () {
+        console.log("hahaha")
+        $.ajax({
+            url:"getAllPerson.php",
+            type:'get',
+            dataType:'json',
+            success:function (data) {
+                console.log("connect success")
+                console.log(data.toString())
+
+                for(x in data){
+                    var person = data[x]
+                    var node="<li class=\"list-item\"><div class=\"name\">"+person.name+"</div><div class=\"phone\">"
+                        +person.phone+"</div><div class=\"email\">"+person.email+"</div><div class=\"birth\">"+person.birth+"</div></li>"
+                    $('#address-list').append(node)
+                }
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest.status);
+                console.log(XMLHttpRequest.readyState);
+                console.log(textStatus);
+            }
+        })
+    })
+</script>
+</body>
+</html>

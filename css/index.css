@@ -1,0 +1,35 @@
+body{
+    margin:0 auto;
+}
+
+.list-item{
+    position: relative;
+    width:250px;
+    height:60px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.name{
+    position: absolute;
+    top:5px;
+    left:10px;
+    font-size: 18px;
+    font-weight: 800;
+}
+.phone{
+    position: absolute;
+    top:5px;
+    right:10px;
+}
+.email{
+    position: absolute;
+    top:30px;
+    left:10px;
+}
+.birth{
+    position: absolute;
+    top:30px;
+    right:10px;
+}
