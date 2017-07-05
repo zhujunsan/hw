@@ -114,40 +114,45 @@
 				);
 				$ID = $_GET["id"];
 		   		$sql = "UPDATE ADDRESS SET ";
-		   		$flagFirst = 1;
-				for ($i = 0; $i <= 3; $i++) {
-					if (!$isEmpty[$i]) {
-						if ($flagFirst) {
-							$flagFirst = 0;
-						} else {
-							$sql = $sql.", ";
-						}
-						switch ($i) {
-							case 0:
-								$sql = $sql."NAME = $name";
-								break;
-							case 1:
-								$sql = $sql."MAIL = $mail";
-								break;
-							case 2:
-								$sql = $sql."PHONE = $phone";
-								break;
-							case 3:
-								$sql = $sql."BIRTH = $birth";
-								break;							
-							default:
-								break;
+
+		   		if (array_sum($isEmpty) > 0) {
+			   		$flagFirst = 1;
+					for ($i = 0; $i <= 3; $i++) {
+						if (!$isEmpty[$i]) {
+							if ($flagFirst) {
+								$flagFirst = 0;
+							} else {
+								$sql = $sql.", ";
+							}
+							switch ($i) {
+								case 0:
+									$sql = $sql."NAME = $name";
+									break;
+								case 1:
+									$sql = $sql."MAIL = $mail";
+									break;
+								case 2:
+									$sql = $sql."PHONE = $phone";
+									break;
+								case 3:
+									$sql = $sql."BIRTH = $birth";
+									break;							
+								default:
+									break;
+							}
 						}
 					}
-				}
-		   		$sql = $sql." WHERE ID = $ID";
-				$ret = $db->exec($sql);
-				if (!$ret) {
-					$res = ($db->lastErrorMsg());
+			   		$sql = $sql." WHERE ID = $ID";
+					$ret = $db->exec($sql);
+					if (!$ret) {
+						$res = ($db->lastErrorMsg());
+					} else {
+						$res = 0;
+					}
+		   		} else {
+		   			$res = 1;
+		   		}
 
-				} else {
-					$res = 0;
-				}
 				break;			
 			case 'delete':
 				$id = $_GET["id"];

@@ -159,6 +159,8 @@ $(document).on('click', '.btnUpdate', function(e){
 			var res = "似乎出了点问题";
 			if(data == 0){
 				res = "成功修改！";
+			}else if(data == 1){
+				res = "未修改任何值！";
 			}
 			$("#showResult").html(res);
 		},
