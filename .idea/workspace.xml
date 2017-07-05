@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding>
                 <marker date="1499244858774" expanded="true" signature="306:325" ph="SELECT * FRO... Users" />
               </folding>
@@ -34,18 +34,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="delete.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="513">
+              <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
-                <element signature="e#223#302#0#PHP" expanded="true" />
-                <marker date="1499246684072" expanded="true" signature="324:350" ph="SELECT COUNT... Users" />
-                <marker date="1499246684072" expanded="true" signature="451:479" ph="DELETE FROM " />
-                <marker date="1499246684072" expanded="true" signature="451:480" ph="DELETE FROM " />
-                <marker date="1499246684072" expanded="true" signature="451:483" ph="DELETE FROM " />
-                <marker date="1499246684072" expanded="true" signature="468:478" ph="DELETE FROM " />
+                <element signature="e#227#326#0#PHP" expanded="true" />
+                <marker date="1499247613676" expanded="true" signature="356:382" ph="SELECT COUNT... Users" />
+                <marker date="1499247613676" expanded="true" signature="503:531" ph="DELETE FROM " />
+                <marker date="1499247613676" expanded="true" signature="503:532" ph="DELETE FROM " />
+                <marker date="1499247613676" expanded="true" signature="503:535" ph="DELETE FROM " />
+                <marker date="1499247613676" expanded="true" signature="520:530" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="input.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="266">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -64,32 +64,32 @@
       <file leaf-file-name="Post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="26" selection-end-column="2" />
+            <state relative-caret-position="190">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
-                <element signature="e#6#85#0#PHP" expanded="true" />
-                <marker date="1499245869064" expanded="true" signature="250:269" ph="SELECT COUNT... " />
-                <marker date="1499245869064" expanded="true" signature="250:275" ph="SELECT COUNT... Users" />
-                <marker date="1499245869064" expanded="true" signature="250:349" ph="SELECT COUNT... Users" />
-                <marker date="1499245869064" expanded="true" signature="351:362" ph="INSERT INTO Users... " />
-                <marker date="1499245869064" expanded="true" signature="351:369" ph="INSERT INTO users... " />
-                <marker date="1499245869064" expanded="true" signature="351:408" ph="INSERT INTO Users... " />
-                <marker date="1499245869064" expanded="true" signature="351:411" ph="INSERT INTO Users... " />
-                <marker date="1499245869064" expanded="true" signature="351:420" ph="INSERT INTO Users... " />
-                <marker date="1499245869064" expanded="true" signature="351:433" ph="INSERT INTO Users... " />
-                <marker date="1499245869064" expanded="true" signature="551:601" ph="..." />
+                <element signature="e#10#109#0#PHP" expanded="true" />
+                <marker date="1499247613732" expanded="true" signature="302:321" ph="SELECT COUNT... " />
+                <marker date="1499247613732" expanded="true" signature="302:327" ph="SELECT COUNT... Users" />
+                <marker date="1499247613732" expanded="true" signature="302:417" ph="SELECT COUNT... Users" />
+                <marker date="1499247613732" expanded="true" signature="419:430" ph="INSERT INTO Users... " />
+                <marker date="1499247613732" expanded="true" signature="419:437" ph="INSERT INTO users... " />
+                <marker date="1499247613732" expanded="true" signature="419:476" ph="INSERT INTO Users... " />
+                <marker date="1499247613732" expanded="true" signature="419:479" ph="INSERT INTO Users... " />
+                <marker date="1499247613732" expanded="true" signature="419:488" ph="INSERT INTO Users... " />
+                <marker date="1499247613732" expanded="true" signature="419:501" ph="INSERT INTO Users... " />
+                <marker date="1499247613732" expanded="true" signature="643:693" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Conn.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Conn.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Conn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="361">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
-                <element signature="e#6#122#0#PHP" expanded="true" />
+                <element signature="e#10#150#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,9 +106,9 @@
         <option value="$PROJECT_DIR$/deleteSql.php" />
         <option value="$PROJECT_DIR$/input.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/delete.php" />
         <option value="$PROJECT_DIR$/Post.php" />
         <option value="$PROJECT_DIR$/Conn.php" />
-        <option value="$PROJECT_DIR$/delete.php" />
       </list>
     </option>
   </component>
@@ -120,8 +120,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
-    <option name="y" value="33" />
+    <option name="x" value="507" />
+    <option name="y" value="21" />
     <option name="width" value="1400" />
     <option name="height" value="1092" />
   </component>
@@ -246,15 +246,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499232749041</updated>
-      <workItem from="1499232750316" duration="14172000" />
+      <workItem from="1499232750316" duration="14609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14172000" />
+    <option name="totallyTimeSpent" value="14609000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="33" width="1400" height="1092" extended-state="1" />
+    <frame x="507" y="21" width="1400" height="1092" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -314,6 +314,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <marker date="1499244858774" expanded="true" signature="306:325" ph="SELECT * FRO... Users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phpinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -322,65 +332,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/delete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state relative-caret-position="513">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
           <folding>
-            <marker date="1499244858774" expanded="true" signature="306:325" ph="SELECT * FRO... Users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Conn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="e#6#122#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="26" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1499245869064" expanded="true" signature="250:269" ph="SELECT COUNT... " />
-            <marker date="1499245869064" expanded="true" signature="250:275" ph="SELECT COUNT... Users" />
-            <marker date="1499245869064" expanded="true" signature="250:349" ph="SELECT COUNT... Users" />
-            <marker date="1499245869064" expanded="true" signature="351:362" ph="INSERT INTO Users... " />
-            <marker date="1499245869064" expanded="true" signature="351:369" ph="INSERT INTO users... " />
-            <marker date="1499245869064" expanded="true" signature="351:408" ph="INSERT INTO Users... " />
-            <marker date="1499245869064" expanded="true" signature="351:411" ph="INSERT INTO Users... " />
-            <marker date="1499245869064" expanded="true" signature="351:420" ph="INSERT INTO Users... " />
-            <marker date="1499245869064" expanded="true" signature="351:433" ph="INSERT INTO Users... " />
-            <marker date="1499245869064" expanded="true" signature="551:601" ph="..." />
+            <element signature="e#227#326#0#PHP" expanded="true" />
+            <marker date="1499247613676" expanded="true" signature="356:382" ph="SELECT COUNT... Users" />
+            <marker date="1499247613676" expanded="true" signature="503:531" ph="DELETE FROM " />
+            <marker date="1499247613676" expanded="true" signature="503:532" ph="DELETE FROM " />
+            <marker date="1499247613676" expanded="true" signature="503:535" ph="DELETE FROM " />
+            <marker date="1499247613676" expanded="true" signature="520:530" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="266">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delete.php">
+    <entry file="file://$PROJECT_DIR$/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#10#109#0#PHP" expanded="true" />
+            <marker date="1499247613732" expanded="true" signature="302:321" ph="SELECT COUNT... " />
+            <marker date="1499247613732" expanded="true" signature="302:327" ph="SELECT COUNT... Users" />
+            <marker date="1499247613732" expanded="true" signature="302:417" ph="SELECT COUNT... Users" />
+            <marker date="1499247613732" expanded="true" signature="419:430" ph="INSERT INTO Users... " />
+            <marker date="1499247613732" expanded="true" signature="419:437" ph="INSERT INTO users... " />
+            <marker date="1499247613732" expanded="true" signature="419:476" ph="INSERT INTO Users... " />
+            <marker date="1499247613732" expanded="true" signature="419:479" ph="INSERT INTO Users... " />
+            <marker date="1499247613732" expanded="true" signature="419:488" ph="INSERT INTO Users... " />
+            <marker date="1499247613732" expanded="true" signature="419:501" ph="INSERT INTO Users... " />
+            <marker date="1499247613732" expanded="true" signature="643:693" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
-            <element signature="e#223#302#0#PHP" expanded="true" />
-            <marker date="1499246684072" expanded="true" signature="324:350" ph="SELECT COUNT... Users" />
-            <marker date="1499246684072" expanded="true" signature="451:479" ph="DELETE FROM " />
-            <marker date="1499246684072" expanded="true" signature="451:480" ph="DELETE FROM " />
-            <marker date="1499246684072" expanded="true" signature="451:483" ph="DELETE FROM " />
-            <marker date="1499246684072" expanded="true" signature="468:478" ph="DELETE FROM " />
+            <element signature="e#10#150#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

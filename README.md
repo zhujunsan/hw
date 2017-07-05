@@ -9,22 +9,16 @@
 
 - 使用MySQL进行数据持久化
 
-MySQL的表结构如下：
- 
+> **MySQL的表结构如下：**
+
+```
 CREATE TABLE Users
-
 (
-
 	id int,
-	
 	name varchar(255),
-	
 	sex varchar(255),
-	
 	email varchar(255),
-	
 	phone varchar(255),
-	
 	birthday varchar(255)
-
 )
+```
