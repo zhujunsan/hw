@@ -1,5 +1,8 @@
+<div align="center">
+    <b>通讯录</b>
+</div>
 <div align="right">
-    [<a href="input.php" mce_href="input.php">添加</a>]
+    [<a href="input.php" mce_href="input.php">添加</a>][<a href="delete.php" mce_href="delete.php">删除</a>]
 </div>
 <?php
 /**
@@ -9,9 +12,10 @@
  * Time: 13:45
  * Email: linshunda@baixing.com
  */
-$sql = "SELECT * FROM Users";       //查询数据库
+$sql = "SELECT * FROM users";       //查询数据库
 require('conn.php');               //调用conn.php文件，执行数据库操作
 ?>
+
 <!----创建一个表格---->
 <table width = "100%" border="1">
     <tr>

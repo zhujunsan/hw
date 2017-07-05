@@ -25,10 +25,9 @@ $result = mysqli_query($sql) or die("数据库查询失败！<br/>可能数据�
 */
 
 $conn = new mysqli($db_host, $db_user, $db_passw, $db_name);
-mysqli_query("set names 'utf8'");
 if(mysqli_connect_errno())
 {
     echo mysqli_connect_error();
 }
-$result = mysqli_query($conn, $sql) or die("数据库查询失败！<br/>可能数据库中没有记录");
+$result = mysqli_query($conn, $sql) or die("数据库操作失败！");
 ?>
