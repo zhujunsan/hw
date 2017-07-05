@@ -4,7 +4,7 @@
  */
 
 $id = $_GET['id'];
-$sql = 'SELECT * FROM `contacts` WHERE `id`='.$id.';';
+$sql = "SELECT * FROM `contacts` WHERE `id`=$id;";
 require('connectDatabase.php');
 
 $stmt = $db->query($sql);
