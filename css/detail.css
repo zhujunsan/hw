@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul {
+    width:200px;
+    margin: auto;
+}
+
+li {
+    padding: 5px 0;
+}
+
+#delete {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#userId {
+    display: none;
+}
