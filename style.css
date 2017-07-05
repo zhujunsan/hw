@@ -1,11 +1,58 @@
 html{
     background-color: gainsboro;
 }
+h1{
+    text-align: center;
+}
+input{
+    background-color: khaki;
+    border:0;
+    outline: none;
+    font-size: large;
+}
 .contact{
     background-color: khaki;
     position:relative;
     float: left;
     width: 25%;
     margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
 
+}
+.contact:hover{
+    box-shadow: 10px 10px 5px #888888;
+}
+.name {
+    margin-left: 10%;
+    margin-right: 10% ;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Garamond";
+    border-bottom: 1px solid sandybrown;
+}
+.tel{
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.email{
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.birthday{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#add{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 100px;
+    color: blue;
+}
+.trash{
+    position: relative;
+    float: right;
 }
